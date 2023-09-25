@@ -1,11 +1,11 @@
 <?php
-
+include('token.php');
 if(isset($_POST['submitBtn'])){
 $city = $_POST['search'];
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://google-translate1.p.rapidapi.com/language/translate/v2",
+	CURLOPT_URL => "$url",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_ENCODING => "",
 	CURLOPT_MAXREDIRS => 10,
